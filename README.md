@@ -2,6 +2,19 @@
 
 ## Starting Up Locally
 
+Estimated time to do this: 45 minutes.
+
+Summary of commands to execute:
+
+Copy .env and *.csv from `Coding Challenge` folder to the storage/seeders folder
+
+```
+./vendor/bin/sail up
+docker exec -it rtn-player-overview-laravel.test-1 bash
+php artisan migrate --seed
+php artisan rtn-player-overview:populate-all-years
+```
+
 Paste in the .env file provided by Ervinne to the root directory. He should send an email with it as an attachment.
 
 1. Start up the containers:
@@ -16,19 +29,22 @@ Paste in the .env file provided by Ervinne to the root directory. He should send
 docker exec -it rtn-player-overview-laravel.test-1 bash
 ```
 
-3. Migrate 
-
-```
-php artisan migrate
-```
-
-4. Seed
-
+3. Migrate and seed
 Copy the contents of the `Coding Challenge` folder to the storage/seeders folder then run:
 
 ```
-php artisan db:seed
+php artisan migrate --seed
 ```
+
+Note that the seeding process may take about 5-10 minutes. I've set the match stats seeder to log every 10k row of data inserted to see that the thing is still running.
+
+4. Populate denormalized table used for cached data:
+
+```
+php artisan rtn-player-overview:populate-all-years
+```
+
+Populating the player overview should take about 15-20 minutes of processing.
 
 ## Dev Notes
 

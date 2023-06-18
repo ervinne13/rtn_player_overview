@@ -20,6 +20,13 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        // Paginator::defaultView('view-name');
+        // TODO: Since defaultView does the binds itself, we can't do contextual binding
+        // Tech Debt: we check how can we conditionally set which pagination to use
+        // Paginator::defaultView('vendor.pagination.default');
+        // $this->app->when(Firewall::class)
+        //   ->needs(Paginator::class)
+        //   ->give(function() {
+        //     return Paginator::defaultView('player-overview.pagination');
+        //   });        
     }
 }

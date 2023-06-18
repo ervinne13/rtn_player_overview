@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-// use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Illuminate\Support\Facades\DB;
 
@@ -30,6 +29,7 @@ class DatabaseSeeder extends Seeder
             TeamCSVSeeder::class,
             MatchCSVSeeder::class,
             MatchStatParameterCSVSeeder::class,
+            MatchStatCSVSeeder::class // Takes about 3-5 minutes
         ]);
     }
 }

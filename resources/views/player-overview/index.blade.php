@@ -11,7 +11,7 @@
         <select id="parameter"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           @foreach ($parameters as $param)
-            <option value={{ $param->id }} @if ($loop->first) selected @endif>
+            <option value={{ $param->id }} @if ($filters['param_id'] == $param->id) selected @endif>
               {{ $param->name }}
             </option>
           @endforeach
@@ -24,7 +24,7 @@
         <select id="year"
           class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500">
           @foreach ($years as $year)
-            <option value={{ $year }} @if ($loop->first) selected @endif>
+            <option value={{ $year }} @if ($filters['year'] == $year) selected @endif>
               {{ $year }}
             </option>
           @endforeach
@@ -35,10 +35,12 @@
     <div data-paginated-content-container>
       @include('player-overview.table')
       <div class="p-5">
-        {{ $overviews }}
+        {{ $overviews->appends(request()->query())->links() }}
       </div>
     </div>
   </div>
+
+  <script data-current-page>{{ $overviews->currentPage() }}</script>
 
   @vite('resources/js/player-overview/filter.js')
 </x-layout>

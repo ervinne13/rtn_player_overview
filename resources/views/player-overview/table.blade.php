@@ -24,16 +24,29 @@
             {{ $overview->football_name }}
           </th>
           <td class="px-6 py-4">
-            White
+            {{ $overview->statistic }}
           </td>
           <td class="px-6 py-4">
-            Laptop PC
+            {{ $overview->value }}
           </td>
           <td class="px-6 py-4">
-            $1999
+            {{ $overview->match_year }}
           </td>
         </tr>
       @endforeach
     </tbody>
   </table>
+
+  <template id="player-overview-row">
+    <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700">
+      <th data-name scope="row" class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white">        
+      </th>
+      <td data-statistic class="px-6 py-4">
+      </td>
+      <td data-value class="px-6 py-4">
+      </td>
+      <td data-year class="px-6 py-4">
+      </td>
+    </tr>
+  </template>
 </div>
