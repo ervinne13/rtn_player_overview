@@ -22,7 +22,7 @@ class PlayerOverviewRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'param_id' => 'nullable|string|exists:match_stat_parameters,id',
+            'param_id' => 'nullable|integer|exists:match_stat_parameters,id',
             'year' => 'nullable|integer'
         ];
     }
