@@ -1,5 +1,18 @@
 # RTN - Player Overview Demo Solution
 
+## Handover Document
+
+Details about the design decisions and how the acceptance criteria is met is documented in the [Handover to Coding Chiefs and Realtimes](https://sharing.clickup.com/3890038/t/h/865cjctkj/JE8QZCSSBW16OST) clickup task.
+Even more details on the complete development journey is documented in the subtasks of the [Release: v0.0.1 - Player Overview Solution](https://sharing.clickup.com/3890038/t/h/865cjcnp0/N59KQVLXKXYG8I3) clickup milestone task.
+
+[Release: v0.0.1 - Player Overview Solution](https://sharing.clickup.com/3890038/t/h/865cjcnp0/N59KQVLXKXYG8I3)
+- [Setup Project, Migrate, and Cherry Pick Data for Development](https://sharing.clickup.com/3890038/t/h/865cjcmaw/N59KQVLXKXYG8I3)
+- [(AFK) Importing Match Stats Data](https://sharing.clickup.com/3890038/t/h/865cjcw75/N59KQVLXKXYG8I3)
+- [Solutioning](https://sharing.clickup.com/3890038/t/h/865cjcmaz/N59KQVLXKXYG8I3)
+- [Create Denormalized Player Overview Table](https://sharing.clickup.com/3890038/t/h/865cjcta7/N59KQVLXKXYG8I3)
+- [Create the Player Overview Page](https://app.clickup.com/t/865cjctaa)
+- [Handover to Coding Chiefs and Realtimes](https://sharing.clickup.com/3890038/t/h/865cjctkj/JE8QZCSSBW16OST)
+
 ## Starting Up Locally
 
 Estimated time to do this: 45 minutes.
