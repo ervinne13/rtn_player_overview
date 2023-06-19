@@ -70,6 +70,7 @@ If you inspect the database, there should be an extra table `personal_access_tok
 ## Tech Debt Backlog
 
 - Sanctum is not being used, find a way to gracefully uninstall it and prevent it from creating its own table when application is migrated
+- We used sail as is without modifications. We can actually remove uneeded containers like the mail tester and selenium though I opted to keep it to play with it later on after this task.
 
 ## Deployment
 
